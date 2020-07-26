@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
-        if (MainActivity.isFirstRun) {
+        if (isFirstRun) {
             Handler().postDelayed(Runnable() {
                 run() {
-                    MainActivity.isFirstRun = false
+                    isFirstRun = false
                     startActivity(Intent(this, NewsActivity::class.java))
                     finish()
                 }
