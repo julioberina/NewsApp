@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".NewsActivity">
 
+    <TextView
+        android:id="@+id/queryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="274dp"
+        android:layout_marginEnd="215dp"
+        android:layout_marginBottom="438dp"
+        android:gravity="start"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/resetButton"
         android:layout_width="142dp"
@@ -14,6 +29,7 @@
         android:layout_marginTop="175dp"
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="504dp"
+        android:onClick="resetClicked"
         android:text="Reset"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,6 +45,7 @@
         android:layout_marginEnd="215dp"
         android:layout_marginBottom="504dp"
         android:background="#0000FF"
+        android:onClick="searchClicked"
         android:text="@android:string/search_go"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -63,6 +80,59 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textColorLink="@color/cardview_dark_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/showingResultsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="239dp"
+        android:layout_marginEnd="215dp"
+        android:layout_marginBottom="473dp"
+        android:gravity="start"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/prevText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="645dp"
+        android:layout_marginEnd="334dp"
+        android:layout_marginBottom="37dp"
+        android:clickable="false"
+        android:onClick="prevClicked"
+        android:text="&lt;"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="338dp"
+        android:layout_marginTop="645dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="37dp"
+        android:clickable="false"
+        android:onClick="nextClicked"
+        android:text="&gt;"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
