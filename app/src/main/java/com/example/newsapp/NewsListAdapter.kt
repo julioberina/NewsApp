@@ -52,7 +52,12 @@ public class NewsListAdapter() : RecyclerView.Adapter<NewsListAdapter.ViewHolder
     }
 
     override fun getItemCount(): Int {
-        return data!!.articles.size
+        if (data == null) {
+            return 0
+        }
+        else {
+            return data!!.articles.size
+        }
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

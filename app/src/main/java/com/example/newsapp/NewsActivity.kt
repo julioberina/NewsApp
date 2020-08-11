@@ -34,7 +34,6 @@ class NewsActivity : AppCompatActivity() {
     private lateinit var newsService: NewsService
     private lateinit var adapter: NewsListAdapter
     public var data: News? = null
-    public lateinit var defaultData: News
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,16 +46,10 @@ class NewsActivity : AppCompatActivity() {
                             .build()
 
         newsService = retrofit.create(NewsService::class.java)
+
         Log.e("NewsActivity", "I made it to this point")
-
-        runBlocking {
-            val headerMap = mapOf("X-Api-Key" to apiKey)
-            defaultData = newsService.getNews(headerMap, "coronavirus", 10, currentPage)
-        }
-
         Log.e("NewsActivity", "I finished the request")
 
-        data = defaultData
         adapter = NewsListAdapter(this, data)
 
         setContentView(R.layout.activity_news)
@@ -125,8 +118,6 @@ class NewsActivity : AppCompatActivity() {
 
         val recView = findViewById<RecyclerView>(R.id.recView)
         recView.visibility = View.GONE
-
-        data = defaultData
 
         adapter.setData(data)
         adapter.notifyDataSetChanged()

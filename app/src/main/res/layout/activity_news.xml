@@ -10,10 +10,12 @@
         android:id="@+id/queryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="196dp"
-        android:layout_marginTop="274dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="280dp"
+        android:width="300dp"
         android:gravity="start"
         android:layoutDirection="ltr"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,12 +69,14 @@
 
     <TextView
         android:id="@+id/showingResultsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="196dp"
-        android:layout_marginTop="239dp"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="260dp"
+        android:width="300dp"
         android:gravity="start"
         android:layoutDirection="ltr"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -81,7 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="58dp"
-        android:layout_marginTop="645dp"
+        android:layout_marginTop="670dp"
         android:clickable="false"
         android:onClick="prevClicked"
         android:text="&lt;"
@@ -96,7 +100,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="338dp"
-        android:layout_marginTop="645dp"
+        android:layout_marginTop="670dp"
         android:clickable="false"
         android:onClick="nextClicked"
         android:text="&gt;"
